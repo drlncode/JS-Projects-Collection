@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "js-projects-collection",
-  "description": "Projects that I have done with JavaScript as practice resources.",
+  "description": "Projects I've done with JavaScript as practice resources, organized into a Single Page Application (SPA) using Native JS to serve them all.",
   "scripts": {
     "dev": "node --watch ./index.js",
     "build": "node ./index.js"
