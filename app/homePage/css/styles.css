@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    .app-header {
+        width: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+
+        #back {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px 6px;
+            gap: 3px;
+
+            svg {
+                width: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .app-header {
+        .github-icon {
+            display: none;
+        }
+    }
+}

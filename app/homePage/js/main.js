@@ -1,1 +1,1 @@
-const appContainer = document.querySelector('.app');
+const appContainer = document.querySelector('.app-content');
