@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "js-projects-collection",
-  "description": "Here I have projects that I have done with JavaScript as practice resources.",
+  "description": "Projects that I have done with JavaScript as practice resources.",
   "scripts": {
     "dev": "node --watch ./index.js",
     "build": "node ./index.js"
