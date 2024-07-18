@@ -1,21 +1,23 @@
 const appContainer = document.querySelector('.app-content');
 const btns = document.getElementsByTagName('a');
 const paths = {
-    '/': 'http://localhost:3000/home',
-    '/projects': 'http://localhost:3000/projects'
+    '/': '/home',
+    '/projects': '/projects'
 }
 
-document.addEventListener('DOMContentLoaded', getStateContent)
+document.addEventListener('DOMContentLoaded', getStateContent);
 
 for (let n = 0; n < btns.length; n++) {
     btns[n].addEventListener('click', setState);
 }
 
 function setState(e) {
-    e.preventDefault();
+    if (e.target.classList.contains('nav-link')) {
+        e.preventDefault();
 
-    history.pushState(null, '', e.target.href);
-    getStateContent();
+        history.pushState(null, '', e.target.href);
+        getStateContent();
+    }
 }
 
 async function getStateContent() {
@@ -27,4 +29,10 @@ async function getStateContent() {
     .then(response => response.text())
     .then(data => data)
     .catch(err => console.error(err));
+
+    renderContent(content);
+}
+
+function renderContent(content) {
+    appContainer.innerHTML = content;
 }
