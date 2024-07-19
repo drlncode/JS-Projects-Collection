@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { join } from 'node:path';
+import { readFile } from 'node:fs/promises';
 
 const homePageFile = join(process.cwd(), '/app/homePage/index.html');
 const homePageContent = join(process.cwd(), '/app/homePage/indexContent.html');
@@ -36,18 +37,34 @@ homePageRouter.get('/:folder/:file', (req, res) => {
 });
 
 // Dynamic content.
-homePageRouter.post('/home', (req, res) => {
-    res.sendFile(homePageContent, (err) => {
-        if (err) {
-            res.status(500).send('Internal Server Error.');
-        }
-    });
+homePageRouter.post('/home', async (req, res) => {
+    let resultContent;
+
+    try {
+        resultContent = await readFile(homePageContent, 'utf-8');
+    } catch (error) {
+        res.status(500).send('Internal Server Error.');
+        throw error;
+    }
+
+    res.status(200).json(JSON.stringify({
+        title: 'My JS Projects Collection',
+        body: resultContent
+    }));
 });
 
-homePageRouter.post('/projects', (req, res) => {
-    res.sendFile(projectsContent, (err) => {
-        if (err) {
-            res.status(500).send('Internal Server Error.');
-        }
-    });
+homePageRouter.post('/projects', async (req, res) => {
+    let resultContent;
+
+    try {
+        resultContent = await readFile(projectsContent, 'utf-8');
+    } catch (error) {
+        res.status(500).send('Internal Server Error.');
+        throw error;
+    }
+
+    res.status(200).json(JSON.stringify({
+        title: 'Projects',
+        body: resultContent
+    }));
 });

@@ -1,5 +1,6 @@
+const currentAppTitle = document.querySelector('.current-page-content > .title');
 const appContainer = document.querySelector('.app-content');
-const btns = document.getElementsByTagName('a');
+const btns = document.querySelectorAll('.nav-link');
 const paths = {
     '/': '/home',
     '/projects': '/projects'
@@ -12,12 +13,10 @@ for (let n = 0; n < btns.length; n++) {
 }
 
 function setState(e) {
-    if (e.target.classList.contains('nav-link')) {
-        e.preventDefault();
+    e.preventDefault();
 
-        history.pushState(null, '', e.target.href);
-        getStateContent();
-    }
+    history.pushState(null, '', e.target.href);
+    getStateContent();
 }
 
 async function getStateContent() {
@@ -26,13 +25,14 @@ async function getStateContent() {
     const content = await fetch(path, {
         method: 'POST'
     })
-    .then(response => response.text())
-    .then(data => data)
+    .then(response => response.json())
+    .then(data => JSON.parse(data))
     .catch(err => console.error(err));
 
     renderContent(content);
 }
 
 function renderContent(content) {
-    appContainer.innerHTML = content;
+    currentAppTitle.textContent = content.title;
+    appContainer.innerHTML = content.body;
 }
