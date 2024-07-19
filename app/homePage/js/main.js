@@ -1,5 +1,5 @@
 const appContainer = document.querySelector('.app-content');
-const btns = document.querySelectorAll('.nav-link');
+const btns = document.querySelectorAll('.state-link');
 const paths = {
     '/': '/home',
     '/projects': '/projects'
