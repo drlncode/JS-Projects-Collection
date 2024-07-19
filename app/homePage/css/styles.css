@@ -6,27 +6,34 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
-
-    a {
-        text-decoration: none;
-    }
+    background-color: #010103;
+    color: #c5c9cf;
 }
 
 .app {
+    .link {
+        text-decoration: none;
+        transition: color ease-in-out 0.3s;
+
+        &:hover {
+            color: #ceca06;
+        }
+    }
+
     .app-header-container {
         width: 100%;
         position: fixed;
         display: flex;
         justify-content: center;
-        padding: 10px 0px;
+        padding: 5px 0px 0px 0px;
 
         .app-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-radius: 15px;
-            width: 70%;
-            padding: 15px 25px;
+            border-bottom: 1px solid #ceca06;
+            width: 60%;
+            padding: 15px 50px;
 
             .nav-header {
                 display: flex;
@@ -36,9 +43,9 @@
             }
 
             .github-icon {
-                min-width: 100px;
                 display: flex;
-                justify-content: end;
+                justify-content: center;
+                align-items: center;
                 margin-bottom: 2px;
 
                 a {
@@ -47,6 +54,14 @@
                     svg {
                         width: 22px;
                         height: 22px;
+                        stroke: #c5c9cf;
+                        transition: all ease-in-out 0.3s;
+                    }
+
+                    &:hover {
+                        svg {
+                            stroke: #ceca06;
+                        }
                     }
                 }
             }
@@ -56,7 +71,8 @@
 
 @media screen and (max-width: 600px) {
     .app-header {
-        width: 80% !important;
+        width: 90% !important;
+        padding: 15px 30px !important;
 
         .current-page-content {
             display: none;
