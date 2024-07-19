@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,500&display=swap');
-/*@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;1,600&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Nunito", sans-serif;
     background-color: #010103;
-    color: #c5c9cf;
+    color: var(--white-60);
+}
+
+:root {
+    --yellow: #e9e521;
+    --white-60: #c5c9cf;
 }
 
 .app {
@@ -16,7 +20,7 @@
         transition: color ease-in-out 0.3s;
 
         &:hover {
-            color: #ceca06;
+            color: var(--yellow);
         }
     }
 
@@ -26,12 +30,14 @@
         display: flex;
         justify-content: center;
         padding: 5px 0px 0px 0px;
+        z-index: 1;
+        font-family: "Nunito", sans-serif;
 
         .app-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #ceca06;
+            border-bottom: 1px solid var(--yellow);
             width: 60%;
             padding: 15px 50px;
 
@@ -54,18 +60,24 @@
                     svg {
                         width: 22px;
                         height: 22px;
-                        stroke: #c5c9cf;
+                        stroke: var(--white-60);
                         transition: all ease-in-out 0.3s;
                     }
 
                     &:hover {
                         svg {
-                            stroke: #ceca06;
+                            stroke: var(--yellow);
                         }
                     }
                 }
             }
         }
+    }
+
+    .app-content {
+        padding-top: 100px;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
     }
 }
 
