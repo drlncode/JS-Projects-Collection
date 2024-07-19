@@ -1,4 +1,3 @@
-const currentAppTitle = document.querySelector('.current-page-content > .title');
 const appContainer = document.querySelector('.app-content');
 const btns = document.querySelectorAll('.nav-link');
 const paths = {
@@ -33,6 +32,6 @@ async function getStateContent() {
 }
 
 function renderContent(content) {
-    currentAppTitle.textContent = content.title;
+    document.title = content.title;
     appContainer.innerHTML = content.body;
 }

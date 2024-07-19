@@ -48,7 +48,7 @@ homePageRouter.post('/home', async (req, res) => {
     }
 
     res.status(200).json(JSON.stringify({
-        title: 'My JS Projects Collection',
+        title: 'JS Projects Collection',
         body: resultContent
     }));
 });
