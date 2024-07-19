@@ -40,13 +40,13 @@
             align-items: center;
             border-bottom: 1px solid var(--yellow);
             width: 60%;
-            padding: 15px 50px;
+            padding: 15px 45px;
 
             .nav-header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 15px;
+                gap: 20px;
             }
 
             .github-icon {
@@ -152,7 +152,7 @@
         padding-top: 60px !important;
 
         h1 {
-            font-size: 1.5em;
+            font-size: 1.55em !important;
 
             span::before {
                 content: '\A';
@@ -161,7 +161,7 @@
         }
 
         h3 {
-            font-size: 0.9em;
+            font-size: 0.8em !important;
             width: 85% !important;
         }
     }
