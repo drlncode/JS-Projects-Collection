@@ -32,10 +32,18 @@ export async function getStateContent() {
 
 export function renderContent(content) {
     document.title = content.title;
+    content.subTitle 
+        ? appContainer.appendChild(createSubTitle(content.subTitle))
+        : ''
     appContainer.innerHTML = content.body;
     window.dispatchEvent(changeEvent);
 }
 
 export function getState() {
     return location.pathname;
+}
+
+function createSubTitle(text) {
+    const h3 = document.createElement('h3');
+    return h3.textContent = text;
 }
