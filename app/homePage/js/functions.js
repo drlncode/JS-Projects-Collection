@@ -4,7 +4,8 @@ const changeEvent = new CustomEvent('changeState', {
 });
 const paths = {
     '/': '/home',
-    '/projects': '/projects'
+    '/projects': '/projects',
+    '/project/01/': '/project/01/'
 }
 
 export function setState(e) {
