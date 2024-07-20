@@ -6,4 +6,4 @@
 
 # Introducción
 
-Solo una SPA que roza muy de cerca lo mediocre, why?, es mi primera vez haciendo una y me nació el querer hacerla solo con la teoría y viendo como funcionaban, intenté replicar su funcionamineto lo mejor que pude. Sin conocimiento previo ni nada.
+Solo una SPA que roza muy de cerca lo mediocre, ¿por qué?, es mi primera vez haciendo una y me nació el querer hacerla solo con la teoría y viendo como funcionaban, intenté replicar su funcionamineto lo mejor que pude. Sin conocimiento previo ni nada.
