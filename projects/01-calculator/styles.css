@@ -1,8 +1,10 @@
 .calculator-content {
-    width: 19.5%;
+    width: 250px;
     background-color: #3B0403;
     border-radius: 1em;
     padding: 10px;
+    margin-top: 50px;
+    border: 1px solid var(--yellow);
 
     button {
         width: 40px;
