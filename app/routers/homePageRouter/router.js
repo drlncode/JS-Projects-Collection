@@ -25,7 +25,7 @@ homePageRouter.get('/projects', (req, res) => {
     res.redirect('/');
 });
 
-homePageRouter.get('/:folder/:file', (req, res) => {
+homePageRouter.get('/projects/:folder/:file', (req, res) => {
     const { folder, file } = req.params;
     const requestFile = join(homePageDir, `/${folder}/${file}`);
 
