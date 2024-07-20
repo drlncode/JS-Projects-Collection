@@ -1,6 +1,6 @@
 import express from 'express';
 import { homePageRouter } from './routers/homePageRouter/router.js';
-import { project01Router } from './routers/homePageRouter/01-router.js';
+import { project01Router } from './routers/project01Router/router.js';
 
 export const app = express();
 
