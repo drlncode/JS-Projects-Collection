@@ -12,10 +12,13 @@
             padding: 7px;
 
             .img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 padding-top: 1px;
 
                 img {
-                    min-height: 120px;
+                    max-height: 240px;
                     width: 100%;
                     border-radius: 7px;
                 }
