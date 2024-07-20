@@ -1,0 +1,79 @@
+.app-content {
+    .projects {
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        .project {
+            border: 1px solid var(--yellow);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 7px;
+
+            .img {
+                padding-top: 1px;
+
+                img {
+                    min-height: 120px;
+                    width: 100%;
+                    border-radius: 7px;
+                }
+            }
+
+            .project-name {
+                margin: 3px 0px 15px 0px;
+            }
+
+            .buttons {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                padding-bottom: 2px;
+
+                .link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    border: 1px solid var(--yellow);
+                    padding: 7px;
+                    border-radius: 4px;
+                    transition: all ease-in-out 0.3s;
+                    font-size: 0.85em;
+
+                    &:hover {
+                        background-color: var(--yellow);
+                        color: var(--black);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .app-content {
+        .projects {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 724px) {
+    .app-content {
+        .projects {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .app-content {
+        .projects {
+            width: 70% !important;
+        }
+    }
+}

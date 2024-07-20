@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--black);
+    color: var(--white-60);
+}
+
+:root {
+    --yellow: #e9e521;
+    --white-60: #c5c9cf;
+    --black: #010103;
+}
+
+.app {
+    .link {
+        text-decoration: none;
+        transition: color ease-in-out 0.3s;
+
+        &:hover {
+            color: var(--yellow);
+        }
+    }
+
+    .app-header-container {
+        width: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        padding: 5px 0px 0px 0px;
+        z-index: 1;
+        font-family: "Nunito", sans-serif;
+
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--yellow);
+            width: 60%;
+            padding: 15px 45px;
+
+            .nav-header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .github-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2px;
+
+                a {
+                    height: 22px;
+
+                    svg {
+                        width: 22px;
+                        height: 22px;
+                        stroke: var(--white-60);
+                        transition: all ease-in-out 0.3s;
+                    }
+
+                    &:hover {
+                        svg {
+                            stroke: var(--yellow);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .app-content {
+        padding-top: 100px;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content-home {
+            text-align: center;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 140px;
+
+            h1 {
+                font-size: 2.3em;
+            }
+
+            h3 {
+                font-size: 1em;
+                width: 70%;
+                margin: 0 auto;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+
+                .link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    border: 1px solid var(--yellow);
+                    border-radius: 4px;
+                    padding: 9px;
+                    transition: all ease-in-out 0.3s;
+                    font-size: 0.85em;
+                    font-weight: 500;
+
+                    svg {
+                        transition: all ease-in-out 0.3s;
+                    }
+
+                    &:hover {
+                        background-color: var(--yellow);
+                        color: var(--black);
+
+                        svg {
+                            background-color: var(--yellow);
+                            stroke: var(--black);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .app-header {
+        width: 90% !important;
+        padding: 15px 30px !important;
+
+        .current-page-content {
+            display: none;
+        }
+    }
+
+    .content-home {
+        width: 85% !important;
+        padding-top: 60px !important;
+
+        h1 {
+            font-size: 1.55em !important;
+
+            span::before {
+                content: '\A';
+                white-space: pre;
+            }
+        }
+
+        h3 {
+            font-size: 0.8em !important;
+            width: 85% !important;
+        }
+    }
+}
