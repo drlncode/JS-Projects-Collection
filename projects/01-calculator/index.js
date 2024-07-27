@@ -31,11 +31,9 @@ for (let n = 0; n < buttons.length; n++) {
                 if (pendingOperation[j] === 'x') {
                     pendingOperation = pendingOperation.replace('x', '*');
                     getResult(pendingOperation);
-                } else {
-                    if (pendingOperation[j] === '÷') {
-                        pendingOperation = pendingOperation.replace('÷', '/');
-                        getResult(pendingOperation);
-                    }
+                } else if (pendingOperation[j] === '÷') {
+                    pendingOperation = pendingOperation.replace('÷', '/');
+                    getResult(pendingOperation);
                 }
             }
 
