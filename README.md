@@ -1,7 +1,7 @@
 # JavaScript Projects Collection
 
 <div align='center'>
-    <img src='https://images2.imgbox.com/53/13/1y1HAyBI_o.png' width='100%'>
+    <img src='https://images2.imgbox.com/6f/da/HJOy30QA_o.png' width='100%'>
 </div>
 
 # Introduction
