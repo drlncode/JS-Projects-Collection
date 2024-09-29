@@ -1,8 +1,8 @@
 import express from 'express';
-import { homePageRouter } from './routers/homePageRouter/router.js';
-import { project01Router } from './routers/project01Router/router.js';
+import { homePageRouter } from './routers/client.router.js';
+import { project01Router } from './routers/p1.router.js';
 
-export const app = express();
+const app = express();
 
 app.disable('x-powered-by');
 
@@ -12,6 +12,8 @@ app.use(homePageRouter);
 // Project 01 router.
 app.use(project01Router);
 
-app.use((req, res) => {
+app.use((_req, res) => {
     res.status(404).send('Not Found.');
 });
+
+export default app;
