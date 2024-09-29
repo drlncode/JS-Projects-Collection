@@ -2,10 +2,10 @@ import { Router } from "express";
 import { join } from 'node:path';
 import { readFile } from 'node:fs/promises';
 
-const homePageFile = join(process.cwd(), '/app/homePage/index.html');
-const homePageContent = join(process.cwd(), '/app/homePage/indexContent.html');
-const projectsContent = join(process.cwd(), '/app/homePage/projectsContent.html');
-const homePageDir = join(process.cwd(), '/app/homePage/');
+const homePageFile = join(process.cwd(), '/app/views/index.html');
+const homePageContent = join(process.cwd(), '/app/views/indexContent.html');
+const projectsContent = join(process.cwd(), '/app/views/projectsContent.html');
+const homePageDir = join(process.cwd(), '/app/views/');
 
 export const homePageRouter = Router();
 
