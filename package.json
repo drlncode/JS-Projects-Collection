@@ -2,14 +2,14 @@
   "type": "module",
   "name": "js-projects-collection",
   "description": "Projects I've done with JavaScript as practice resources, organized into a Single Page Application (SPA) using Native JS to serve them all.",
-  "engines": { 
-    "node": "20.x" 
+  "engines": {
+    "node": "20.x"
   },
   "scripts": {
     "dev": "node --watch ./index.js",
     "build": "node ./index.js"
   },
   "dependencies": {
-    "express": "4.19.2"
+    "express": "4.21.0"
   }
 }
