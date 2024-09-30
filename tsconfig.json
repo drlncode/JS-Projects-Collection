@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        // Base
+        "target": "ESNext",
+        "module": "NodeNext",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+
+        // Strictness
+        "strict": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitAny": true,
+
+        // Transpiling options
+        "moduleResolution": "NodeNext",
+        "outDir": "./dist",
+        "resolveJsonModule": true
+    },
+    "include": [
+        "./app",
+        "index.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "projects",
+        "dist"
+    ]
+}
